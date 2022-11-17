@@ -1,9 +1,39 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>registro</ion-title>
+    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Nome completo</ion-label>
+      <ion-input placeholder="Fulano de Tal "></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>CPF</ion-label>
+      <ion-input placeholder="000-002-000-00"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Número de telefone</ion-label>
+      <ion-input type="number" placeholder="000"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="email" placeholder="email@domain.com"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Senha</ion-label>
+      <ion-input type="password" value="Senha"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button class="button" color="primary">Salvar</ion-button>
+  <ion-button class="button" color="primary">Voltar</ion-button>
 
 </ion-content>
