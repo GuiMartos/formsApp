@@ -1,7 +1,3 @@
-.button{
-  margin-left: 150px;
-
-}
 
 .fundo{
  --ion-background-color:rgba(111, 215, 247, 0.603);
@@ -14,3 +10,9 @@
 .fundo2{
   --ion-background-color:rgba(76, 140, 160, 0.829);
  }
+
+ .button{
+  display: flex;
+
+}
+
