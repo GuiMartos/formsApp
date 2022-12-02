@@ -1,17 +1,21 @@
 
 .fundo{
- --ion-background-color:rgba(111, 215, 247, 0.603);
+ --ion-background-color:rgba(216, 216, 216, 0.603);
 }
 
 .card{
   --ion-background-color:white;
+  border-radius: 25px;
 }
 
 .fundo2{
-  --ion-background-color:rgba(76, 140, 160, 0.829);
+  --ion-background-color:rgba(131, 131, 131, 0.829);
  }
 
  .button{
-  display: flex;
+  display:flex;
+
 }
+
+
 
