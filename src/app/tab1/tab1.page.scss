@@ -1,0 +1,23 @@
+.button{
+  display:grid;
+  margin-left:100px;
+  margin-right: 100px;
+
+}
+
+.p{
+  text-align: center;
+}
+
+.card{
+  border-radius: 20px;
+  --ion-background-color:white;
+}
+
+.fundo{
+  --ion-background-color:rgba(51, 141, 137, 0.432);
+}
+
+.fundo2{
+  --ion-background-color:rgba(0, 145, 138, 0.986);
+}
