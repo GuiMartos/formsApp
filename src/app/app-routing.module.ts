@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { Drivers } from '@ionic/storage';
+import { IonicStorageModule } from '@ionic/storage-angular';
 
 const routes: Routes = [
   {
@@ -17,8 +19,11 @@ const routes: Routes = [
 ];
 @NgModule({
   imports: [
+    IonicStorageModule.forRoot({
+      driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage]
+    }),
+    IonicStorageModule.forRoot(),
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
-  exports: [RouterModule]
 })
 export class AppRoutingModule {}
