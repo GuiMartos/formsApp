@@ -16,7 +16,8 @@ export class RegistroPage implements OnInit {
       cpf: ['', Validators.compose([Validators.required])],
       email:['', Validators.compose([Validators.required, Validators.email])],
       senha:['', Validators.compose([Validators.required,Validators.minLength(6),Validators.maxLength(8)])],
-      confirmaSenha:['', Validators.compose([Validators.required,Validators.minLength(6),Validators.maxLength(8)])]
+      telefone: ['',Validators.compose([Validators.required])],
+      confirmarSenha:['', Validators.compose([Validators.required,Validators.minLength(6),Validators.maxLength(8)])]
 
     });
    }
@@ -24,4 +25,7 @@ export class RegistroPage implements OnInit {
   ngOnInit() {
   }
 
+  salvarCadastro(){
+    console.log('Fomulário: ', this.formsCadastro.valid);
+  }
 }
