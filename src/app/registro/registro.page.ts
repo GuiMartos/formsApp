@@ -1,3 +1,5 @@
+import { StorageService } from './../services/storage.service';
+import { Usuario } from './../models/usuario';
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
@@ -10,7 +12,7 @@ export class RegistroPage implements OnInit {
 
   formsCadastro: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private storageService: StorageService) {
     this.formsCadastro = this.formBuilder.group({
       nome: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
       cpf: ['', Validators.compose([Validators.required])],
@@ -25,7 +27,17 @@ export class RegistroPage implements OnInit {
   ngOnInit() {
   }
 
-  salvarCadastro(){
-    console.log('Fomulário: ', this.formsCadastro.valid);
+  async salvarCadastro(){
+    if(this.formsCadastro.valid){
+    this.usuario.nome = formsCadastro.values.nome;
+    this.usuario.cpf = formsCadastro.values.cpf;
+    this.usuario.email = formsCadastro.values.email;
+    this.usuario.email = formsCadastro.values.email;
+      awhit this.storageService.set(this.usuario.email, this usuario);
+
+  }else{
+    alert('Formulário invalido');
   }
+}
+
 }

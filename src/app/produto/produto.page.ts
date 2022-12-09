@@ -19,6 +19,10 @@ export class ProdutoPage implements OnInit {
 
     });
 
+    salvarCadastro(){
+      console.log('Fomulário: ', this.formsCadastro.valid);
+    }
+
   ngOnInit() {
   }
 
