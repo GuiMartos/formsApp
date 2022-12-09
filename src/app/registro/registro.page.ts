@@ -10,7 +10,7 @@ export class RegistroPage implements OnInit {
 
   formsCadastro: FormGroup;
 
-  constructor(private formBuilder : FormBuilder) {
+  constructor(private formBuilder: FormBuilder) {
     this.formsCadastro = this.formBuilder.group({
       nome: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
       cpf: ['', Validators.compose([Validators.required])],

@@ -5,20 +5,21 @@
 </ion-header>
 
 <ion-content class="fundo">
+  <form [formGroup]="formsCadastro">
   <ion-card class="card">
   <ion-item>
     <ion-label>Nome</ion-label>
-    <ion-input placeholder="Bolacha recheada"></ion-input>
+    <ion-input formControlName="nome" placeholder="Bolacha recheada"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Descrição</ion-label>
-    <ion-input placeholder="Bolacha de chocolate"></ion-input>
+    <ion-input formControlName="descricao" placeholder="Bolacha de chocolate"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Valor do produto  R$:</ion-label>
-    <ion-input placeholder="Insira o preço do produto"> </ion-input>
+    <ion-input formControlName="valor" placeholder="Insira o preço do produto"> </ion-input>
   </ion-item>
 
   <ion-item>
@@ -26,5 +27,6 @@
     <ion-input type="date"></ion-input>
   </ion-item>
 </ion-card>
-<ion-button class="button" color="success">Salvar</ion-button>
+<ion-button class="button" expand="block" (click)="salvarCadastro" color="success">Salvar</ion-button>
+</form>
 </ion-content>
